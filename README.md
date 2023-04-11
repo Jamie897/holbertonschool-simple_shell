@@ -1,5 +1,5 @@
-> # Description  
-simple shell is a UNIX command interpreter that replicates core functionalities of the sh shell. This project was developed as part of the third month curriculum at Holberton School
+> # Description
+ We will be making our own simple shell for the use of creating code in the Unix program.
 ------------
  #### Requiment 
 1.  Linux
