@@ -5,18 +5,18 @@
  *@token: delimiter
  *Return: 0
  */
-int char *strtok(char *str, const char *delim)
+int char *strtok(char *str, const char *token)
 {
-    char string[] = "Strtok Function"
-    char *strtoken;
+	char string[] = "Strtok Function"
+	char *strtoken;
 
-    strtoken = strtok(string, " ");
+	strtoken = strtok(string, " ");
 
-    while(strtoken !=NULL)
-    {
-	printf("%s \n", strtoken);
-        strtoken = strtok(NULL, " ");
-    }
+	while (strtoken != NULL)
+	{
+		printf("%s \n", strtoken);
+		strtoken = strtok(NULL, " ");
+	}
 
-    return 0;
-}    
+	return (0);
+}
