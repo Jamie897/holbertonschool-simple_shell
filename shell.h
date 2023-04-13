@@ -15,12 +15,12 @@ extern char **environ;
 #define DELIMIT " \t\r\n\a"
 #define SIZE 1024
 #define PATH_MAX 1020
-int _getline();
+int _getline(void);
 int _strlen(char *s);
 char _strdup(char *str);
 int _strcmp(char *s1, char *s2);
-int _strtok();
-void _fork();
+int _strtok(void);
+void _fork(void);
 void sig_handler(int signum);
 volatile sig_atomic_t flag = 0;
 int _stat(int ac, char **av);
