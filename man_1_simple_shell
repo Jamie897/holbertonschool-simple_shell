@@ -1,18 +1,13 @@
-.\" Manpage for Simple Shell
+.\"Simple Shell ManPage
 .\" Contact mariahseggebruch@gmail.com to correct errors or typos.
-.TH man 1 "10 April 2023" "1.0" "Simple Shell"
 .SH SIMPLE SHELL
-simple shell \- design and implement a simple unix shell 
+Simple shell \- design and implement a simple unix shell 
 .SH SYNOPSIS
-user input is executed similarly as in Bash
+User input is executed similarly as in Bash
 .SH DESCRIPTION
-a shell program that executes commands and system function calls on a local machine, similar to Unix : Bash
+A shell program that executes commands and system function calls on a local machine, similar to Unix : Bash
 .SH OPTIONS
-all options accepted are the same as the options for Unix : Bash
-.SH SEE ALSO
-this was very hard 
-.SH BUGS
-I'm sure there will be plenty.
+All options accepted are the same as the options for Unix : Bash
 .SH AUTHOR
 Mariah Seggebruch <mariahseggebruch> Jamie Toman <jamie897>
 
