@@ -18,21 +18,25 @@ int _strlen(char *s)
 *Return: dest
 */
 
-char _strdup(char *str)
+*char _strdup(char *str)
 {
 	char *dest;
 	int i, j = 0;
 
 	if (str == NULL)
-		return (NULL);
+		return NULL;
+
 	while (str[i] != '\0')
 		i++;
+
 	dest = malloc(i + 1);
+
 	if (dest == NULL)
-		return (NULL);
+		return NULL;
 	for (j = 0; j < i; j++)
 		dest[j] = str[j];
-	return (dest);
+	
+	return dest;
 }
 /**
  * _strcmp - compare two strings
