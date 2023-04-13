@@ -24,4 +24,7 @@ void _fork(void);
 void sig_handler(int signum);
 int _stat(int ac, char **av);
 int _putchar(char c);
+void _prompt(void);
+void path(char *args);
+void free_array(char *args, int count);
 #endif

@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (isatty(STDIN_FILENO))
 		{
-			prompt();
+			_prompt();
 		}
 		line = _getline();
 		if (line[0] == '\n')
@@ -23,7 +23,7 @@ int main(void)
 			continue;
 		}
 		argv = _strtok(line, DELIMIT);
-		path_command(argv);
+		_path_command(argv);
 	}
 	free(line);
 	free_array(argv);
