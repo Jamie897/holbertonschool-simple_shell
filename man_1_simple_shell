@@ -1,13 +1,24 @@
 .\"Simple Shell ManPage
 .\" Contact mariahseggebruch@gmail.com to correct errors or typos.
 .SH SIMPLE SHELL
+<<<<<<< HEAD
 Simple shell \- design and implement a simple unix shell 
+=======
+simple shell \- design and implement a simple unix shell
+>>>>>>> 691ea2317cba91ce32d6fc38bc34da5e5ba7ac3d
 .SH SYNOPSIS
 User input is executed similarly as in Bash
 .SH DESCRIPTION
 A shell program that executes commands and system function calls on a local machine, similar to Unix : Bash
 .SH OPTIONS
+<<<<<<< HEAD
 All options accepted are the same as the options for Unix : Bash
+=======
+all options accepted are the same as the options for Unix : Bash
+.SH SEE ALSO
+this was very hard
+.SH BUGS
+I'm sure there will be plenty.
+>>>>>>> 691ea2317cba91ce32d6fc38bc34da5e5ba7ac3d
 .SH AUTHOR
 Mariah Seggebruch <mariahseggebruch> Jamie Toman <jamie897>
-

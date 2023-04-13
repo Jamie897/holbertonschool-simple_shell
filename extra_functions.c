@@ -7,7 +7,9 @@ int main(void)
 {
 	int status = 1;
 	char *line = NULL, **argv;
+
 	signal(SIGINT, sig_handler);
+
 	while (status)
 	{
 		if (isatty(STDIN_FILENO))
