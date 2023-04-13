@@ -7,18 +7,16 @@
  */
 int char *strtok(char *str, const char *delim)
 {
-    char str[] = " "
-    ;
- 
-    // Returns first token
-    char* token = strtok(str, " - ");
- 
-    // Keep printing tokens while one of the
-    // delimiters present in str[].
-    while (token != NULL) {
-        printf(" % s\n & quot;, token);
-        token = strtok(NULL, " - ");
+    char string[] = "Strtok Function"
+    char *strtoken;
+
+    strtoken = strtok(string, " ");
+
+    while(strtoken !=NULL)
+    {
+	printf("%s \n", strtoken);
+        strtoken = strtok(NULL, " ");
     }
- 
+
     return 0;
-}
+}    
