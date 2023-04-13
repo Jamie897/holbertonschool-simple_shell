@@ -22,7 +22,6 @@ int _strcmp(char *s1, char *s2);
 int _strtok(void);
 void _fork(void);
 void sig_handler(int signum);
-volatile sig_atomic_t flag = 0;
 int _stat(int ac, char **av);
 int _putchar(char c);
 #endif
