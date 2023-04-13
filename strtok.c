@@ -5,15 +5,20 @@
  *@token: delimiter
  *Return: 0
  */
-int _strtok(char *str, const char *token)
+int char *strtok(char *str, const char *delim)
 {
-	char str[] = "";
-	char *token = strtok(str, " ");
-
-	while (token != NULL)
-	{
-		printf("%s\n", token);
-		token = strtok(NULL, " ");
-	}
-	return (0);
+    char str[] = " "
+    ;
+ 
+    // Returns first token
+    char* token = strtok(str, " - ");
+ 
+    // Keep printing tokens while one of the
+    // delimiters present in str[].
+    while (token != NULL) {
+        printf(" % s\n & quot;, token);
+        token = strtok(NULL, " - ");
+    }
+ 
+    return 0;
 }
