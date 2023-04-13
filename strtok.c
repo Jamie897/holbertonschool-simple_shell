@@ -5,9 +5,9 @@
  *@token: delimiter
  *Return: 0
  */
-int char *strtok(char *str, const char *token)
+int main()
 {
-	char string[] = "Strtok Function"
+	char string[] = "Strtok Function";
 	char *strtoken;
 
 	strtoken = strtok(string, " ");
