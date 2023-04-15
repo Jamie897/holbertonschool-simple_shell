@@ -6,16 +6,25 @@
  * @bytes_read: reader
  * Return: 0
  */
-ssize_t _getline(char **string, size_t *size)
+int _getline(char *string, size_t size, ssize_t bytes_read)
 {
-    ssize_t bytes_read;
-    bytes_read = getline(string, size, stdin);
-    if (bytes_read == -1)
-    {
-        puts("ERROR!");
-        free(*string);
-    }
-    return bytes_read;
+	int i;
+
+	bytes_read = 0;
+	string = (char *)malloc(size);
+	if (bytes_read == -1)
+	{
+		puts("ERROR!");
+		free(string);
+	}
+	else
+		for (i = 0; i < 1;)
+		{
+			printf("$ ");
+			bytes_read = getline(&string, &size, stdin);
+			puts(string);
+		}
+	return (0);
 }
 
 #include <stdio.h>
@@ -26,19 +35,14 @@ ssize_t _getline(char **string, size_t *size)
  * _signal - function to handle signal
  * Return: 0
  */
-void sig_handler 
-{
-    printf("SIGINT signal\n");
-}
-
 int _signal(void)
 {
-        signal(SIGINT, sigint_handler);
+	signal(SIGINT, SIG_IGN);
 
-        while (1)
-        {
-                sleep(1);
-        }
+	while (1)
+	{
+		sleep(1);
+	}
 
-        return (0);
+	return (0);
 }

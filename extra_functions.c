@@ -3,43 +3,28 @@
  *main - main function
  *Return: Always(0)
  */
-int status = 1;
-char *line = NULL, **argv;
-
-signal(*SIGINT, "*sig_handler");
-
-while (status)
+int main(void)
 {
-    if (isatty(STDIN_FILENO))
-    {
-        _prompt();
-    }
+	int status = 1;
+	char *line = NULL, **argv;
 
-    line = _getline();
-
-    if (!line)
-    {
-        break;
-    }
-
-    if (line[0] == '\n')
-    {
-        free(line);
-        continue;
-    }
-
-    argv = _strtok(line, DELIMIT);
-
-    if (!argv)
-    {
-        free(line);
-        continue;
-    }
-
-    status = _path_command(argv);
-
-    free_array(argv);
-    free(line);
+	signal(SIGINT, sig_handler);
+	while (status)
+	{
+		if (isatty(STDIN_FILENO))
+		{
+			prompt();
+		}
+		line = _getline();
+		if (line[0] == '\n')
+		{
+			free(line);
+			continue;
+		}
+		argv = _strtok(line, DELIMIT);
+		path_command(argv);
+	}
+	free(line);
+	free_array(argv);
+	return (0);
 }
-
-return (0);

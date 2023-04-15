@@ -27,4 +27,5 @@ int _putchar(char c);
 void _prompt(void);
 void path(char *args);
 void free_array(char *args, int count);
+void my_signal(int sig)
 #endif
