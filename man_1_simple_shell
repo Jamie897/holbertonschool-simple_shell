@@ -2,7 +2,7 @@
 .\" Contact mariahseggebruch@gmail.com to correct errors or typos.
 .SH SIMPLE SHELL
 <<<<<<< HEAD
-Simple shell \- design and implement a simple unix shell 
+Simple shell \- design and implement a simple unix shell
 =======
 simple shell \- design and implement a simple unix shell
 >>>>>>> 691ea2317cba91ce32d6fc38bc34da5e5ba7ac3d
@@ -14,11 +14,5 @@ A shell program that executes commands and system function calls on a local mach
 <<<<<<< HEAD
 All options accepted are the same as the options for Unix : Bash
 =======
-all options accepted are the same as the options for Unix : Bash
-.SH SEE ALSO
-this was very hard
-.SH BUGS
-I'm sure there will be plenty.
->>>>>>> 691ea2317cba91ce32d6fc38bc34da5e5ba7ac3d
 .SH AUTHOR
 Mariah Seggebruch <mariahseggebruch> Jamie Toman <jamie897>

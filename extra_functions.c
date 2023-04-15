@@ -6,7 +6,7 @@
 int status = 1;
 char *line = NULL, **argv;
 
-signal(SIGINT, sig_handler);
+signal(*SIGINT, "*sig_handler");
 
 while (status)
 {
@@ -17,7 +17,7 @@ while (status)
 
     line = _getline();
 
-    if (!line) // check for NULL pointer
+    if (!line)
     {
         break;
     }
@@ -30,7 +30,7 @@ while (status)
 
     argv = _strtok(line, DELIMIT);
 
-    if (!argv) // check for NULL pointer
+    if (!argv)
     {
         free(line);
         continue;

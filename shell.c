@@ -5,23 +5,23 @@
  */
 int _getline(void)
 {
-        char *string;
-        size_t size;
-        ssize_t bytes_read = 0;
-        int i;
+	char *string;
+	size_t size;
+	ssize_t bytes_read = 0;
+	int i;
 
-        string = (char *)malloc(size);
-        if (bytes_read == -1)
-        {
-                puts("hsh");
-        }
-        else
-                for (i = 0; i < 1; i++)
-                {
-                        printf(" ");
-                        bytes_read = getline(&string, &size, stdin);
-                }
-        return (0);
+	string = (char *)malloc(size);
+	if (bytes_read == -1)
+	{
+		puts("hsh");
+	}
+	else
+		for (i = 0; i < 1; i++)
+		{
+		printf(" ")
+		bytes_read = getline(&string, &size, stdin);
+		}
+	return (0);
 }
 
 /**

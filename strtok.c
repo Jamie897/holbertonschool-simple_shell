@@ -5,18 +5,22 @@
  *@token: delimiter
  *Return: 0
  */
-int main()
+int main(void)
 {
-	char string[] = "Strtok Function";
+	char string[] = "Strtok Function ";
 	char *strtoken;
 
-	strtoken = strtok(string, " ");
+	char *copy = malloc(strlen(string) + 1);
+	strcpy(copy, string);
 
+	strtoken = strtok(copy, " ");
+	
 	while (strtoken != NULL)
 	{
-		printf("%s \n", strtoken);
-		strtoken = strtok(NULL, " ");
+	printf("%s\n", strtoken);
+	strtoken = strtok(NULL, " ");
 	}
 
+	free(copy);
 	return (0);
 }
