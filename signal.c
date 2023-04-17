@@ -1,28 +1,14 @@
 #include "shell.h"
+
 /**
- *my_signal - signal handler
- *@sig: signal to be handled
- *Return : 0
+ *handle_signal- it keeps track is interactive mode
+ *@m: the signal number
+ *Return: nothing
  */
-#include <stdio.h>
-#include <signal.h>
 
-void my_signal(int sig)
+void handle_signal(int m)
 {
-	printf("Caught signal %d\n", sig);
-	flag = 1;
-}
-
-int main(void)
-{
-	signal(SIGINT, my_signal);
-	while (1)
-	{
-		if (flag)
-		{
-			printf("Exiting loop...\n");
-			break;
-		}
-	}
-	return (0);
+	(void)m;
+	write(STDERR_FILENO, "\n", 1);
+	write(STDERR_FILENO, "$ ", 2);
 }

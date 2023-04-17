@@ -1,31 +1,61 @@
-#ifndef shell_h
-#define shell_h
-#include <stddef.h>
-#include <sys/stat.h>
-#include <signal.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+#ifndef SHELL_H
+#define SHELL_H
+
+#include <stdarg.h>
 #include <stdio.h>
-#include <sys/wait.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include <sys/types.h>
-#include <fcntl.h>
-#include <stddef.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <stdbool.h>
+
+/* environment variables */
 extern char **environ;
-#define DELIMIT " \t\r\n\a"
-#define SIZE 1024
-#define PATH_MAX 1020
-int _getline(void);
-int _strlen(char *s);
-char _strdup(char *str);
+extern __sighandler_t signal(int __sig, __sighandler_t __handler);
+
+/* handle built ins */
+int checker(char **cmd, char *buf);
+void prompt_user(void);
+void handle_signal(int m);
+char **tokenizer(char *line);
+char *test_path(char **path, char *command);
+char *append_path(char *path, char *command);
+int handle_builtin(char **command, char *line);
+void exit_cmd(char **command, char *line);
+
+void print_env(void);
+
+/* string handlers */
 int _strcmp(char *s1, char *s2);
-int _strtok(void);
-void _fork(void);
-void sig_handler(int signum);
-int _stat(int ac, char **av);
-int _putchar(char c);
-void _prompt(void);
-void path(char *args);
-void free_array(char *args, int count);
-void my_signal(int sig)
+int _strlen(char *s);
+int _strncmp(char *s1, char *s2, int n);
+char *_strdup(char *s);
+char *_strchr(char *s, char c);
+
+void execution(char *cp, char **cmd);
+char *find_path(void);
+
+/* helper function for efficient free */
+void free_buffers(char **buf);
+
+struct builtin
+{
+	char *env;
+	char *exit;
+} builtin;
+
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+
+struct flags
+{
+	bool interactive;
+} flags;
+
 #endif
